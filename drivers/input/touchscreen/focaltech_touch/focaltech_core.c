@@ -72,7 +72,7 @@
 *****************************************************************************/
 #define FTS_DRIVER_NAME                     "fts_ts"
 #define INTERVAL_READ_REG                   200  /* unit:ms */
-#define TIMEOUT_READ_REG                    1000 /* unit:ms */
+#define TIMEOUT_READ_REG                    600 /* unit:ms */
 #if FTS_POWER_SOURCE_CUST_EN
 #define FTS_VTG_MIN_UV                      3000000
 #define FTS_VTG_MAX_UV                      3300000
@@ -95,9 +95,7 @@ static void fts_ts_panel_notifier_callback(enum panel_event_notifier_tag tag,
 #endif
 
 static struct ft_chip_t ctype[] = {
-	{0x88, 0x56, 0x52, 0x00, 0x00, 0x00, 0x00, 0x56, 0xB2},
-	{0x81, 0x54, 0x52, 0x54, 0x52, 0x00, 0x00, 0x54, 0x5C},
-	{0x1C, 0x87, 0x26, 0x87, 0x20, 0x87, 0xA0, 0x00, 0x00},
+	{0x89, 0x54, 0x52, 0x54, 0x52, 0x54, 0x5B, 0x54, 0x5E},
 };
 
 /*****************************************************************************
