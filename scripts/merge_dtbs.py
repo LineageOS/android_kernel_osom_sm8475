@@ -389,7 +389,15 @@ def parse_dt_files(dt_folder):
 		yield DeviceTree(filepath)
 
 def parse_dt_files_subfolder(dt_folder):
-	subfolder = ['camera', 'display', 'video', 'audio', 'mmrm']
+	subfolder = [
+	    'audio',
+	    'camera',
+	    'cvp',
+	    'display',
+	    'eva',
+	    'mmrm',
+	    'video',
+	]
 	index = 0
 	while index < len(subfolder):
 		folder = subfolder[index]
