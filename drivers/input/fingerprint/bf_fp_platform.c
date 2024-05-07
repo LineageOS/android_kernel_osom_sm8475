@@ -1170,7 +1170,7 @@ static struct platform_driver bf_plt_driver = {
     .suspend = bf_suspend,
 };
 
-void bf_unregister()
+void bf_unregister(void)
 {
     platform_driver_unregister(&bf_plt_driver);
 }
