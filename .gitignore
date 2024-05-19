@@ -162,5 +162,11 @@ arch/*/configs/vendor/*_defconfig
 arch/arm64/boot/dts/vendor
 arch/arm/boot/dts/vendor
 
+# vendor uapi headers
+include/uapi/audio
+include/uapi/camera
+include/uapi/display
+include/uapi/vidc
+        
 # Documentation toolchain
 sphinx_*/
