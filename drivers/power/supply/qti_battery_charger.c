@@ -2325,6 +2325,7 @@ static int battery_chg_parse_dt(struct battery_chg_dev *bcdev)
 		bcdev->thermal_fcc_step = 0;
 		len = rc;
 		prev = pst->prop[BATT_CHG_CTRL_LIM_MAX];
+		bcdev->thermal_fcc_ua = pst->prop[BATT_CHG_CTRL_LIM_MAX];
 
 		for (i = 0; i < len; i++) {
 			rc = of_property_read_u32_index(node, "qcom,thermal-mitigation",
@@ -2363,7 +2364,6 @@ static int battery_chg_parse_dt(struct battery_chg_dev *bcdev)
 	}
 
 	bcdev->num_thermal_levels = len;
-	bcdev->thermal_fcc_ua = pst->prop[BATT_CHG_CTRL_LIM_MAX];
 
 	return 0;
 }
